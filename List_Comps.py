@@ -37,7 +37,7 @@ cartesian_product_example_2()
 
 
 """
-Genexps - Saves memory by yielding elements on by one using the iterator protocol, 
+Generator Expressions - Saves memory by yielding elements on by one using the iterator protocol, 
 instead of building a whole list just to feed another constructor.
 """
 
