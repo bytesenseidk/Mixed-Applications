@@ -45,4 +45,3 @@ if __name__ == "__main__":
           f"{list(yielding_func())}\n",
           f"{recursive_func()}")
 
-
