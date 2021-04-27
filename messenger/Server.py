@@ -2,6 +2,7 @@ import os
 import select
 import socket
 
+
 class Server(object):
     def __init__(self,  IP="127.0.0.1", POORT=1234):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -11,7 +12,6 @@ class Server(object):
 
         self.sockets_list = [server_socket]
         self.clients = {}
-
         os.system("clear")
         print(f"[ Server running on IP: {IP} port: {PORT} ]\n")
 
