@@ -40,11 +40,11 @@ if __name__ == "__main__":
                 server.clients[client_socket] = user
                 ip, port = client_address
                 print(f"\n[ USER CONNECTED: {user['data'].decode('utf-8')} ]\n"
-                f"[IP: {ip}]\n[Port: {port}]\n")
+                      f"[IP: {ip}]\n[Port: {port}]\n")
             else:
                 message = server.receive_message(notified_socket)
                 if message is False:
-                    print(f"Connection terminated for user: {user['data'].decode('utf-8')}")
+                    print(f"[ CONNECTION TERMINATED: {user['data'].decode('utf-8')} ]")
                     server.sockets_list.remove(notified_socket)
                     del server.clients[notified_socket]
                     continue
