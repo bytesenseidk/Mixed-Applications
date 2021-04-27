@@ -4,13 +4,13 @@ import socket
 
 
 class Server(object):
-    def __init__(self,  IP="127.0.0.1", POORT=1234):
+    def __init__(self, IP="127.0.0.1", PORT=1234):
         self.server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server_socket.bind((IP, PORT))
         self.server_socket.listen()
 
-        self.sockets_list = [server_socket]
+        self.sockets_list = [self.server_socket]
         self.clients = {}
         os.system("clear")
         print(f"[ Server running on IP: {IP} port: {PORT} ]\n")
@@ -38,7 +38,8 @@ if __name__ == "__main__":
                     continue
                 server.sockets_list.append(client_socket)
                 server.clients[client_socket] = user
-                print(f"-- > New connection established from IP: {*client_address} user: {user['data'].decode('utf-8')}")
+                ip, port = client_address
+                print(f"-- > New connection established from IP: {ip} port: {port} user: {user['data'].decode('utf-8')}")
             else:
                 message = server.receive_message(notified_socket)
                 if message is False:
