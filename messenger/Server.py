@@ -9,15 +9,15 @@ class Server(object):
         self.server_socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         self.server_socket.bind((IP, PORT))
         self.server_socket.listen()
-
+        self.HEADER_LENGTH = 10
         self.sockets_list = [self.server_socket]
         self.clients = {}
         os.system("clear")
-        print(f"[ Server running on IP: {IP} port: {PORT} ]\n")
+        print(f"[ SERVER UP AND RUNNING ]\n[IP: {IP}]\n[Port: {PORT}]\n")
 
     def receive_message(self, client_socket):
         try:
-            message_header = client_socket.recv(HEADER_LENGTH)
+            message_header = client_socket.recv(self.HEADER_LENGTH)
             if not len(message_header):
                 return False
             message_length = int(message_header.decode("utf-8").strip())
@@ -39,7 +39,8 @@ if __name__ == "__main__":
                 server.sockets_list.append(client_socket)
                 server.clients[client_socket] = user
                 ip, port = client_address
-                print(f"-- > New connection established from IP: {ip} port: {port} user: {user['data'].decode('utf-8')}")
+                print(f"\n[ USER CONNECTED: {user['data'].decode('utf-8')} ]\n"
+                f"[IP: {ip}]\n[Port: {port}]\n")
             else:
                 message = server.receive_message(notified_socket)
                 if message is False:
@@ -49,7 +50,7 @@ if __name__ == "__main__":
                     continue
                 user = server.clients[notified_socket]
                 print(f"{user['data'].decode('utf-8')}  >> {message['data'].decode('utf-8')}")
-                for server.client_socket in clients:
+                for server.client_socket in server.clients:
                     if server.client_socket != notified_socket:
                         server.client_socket.send(user["header"] + user["data"] + message["header"] + message["data"])
         for notified_socket in exception_sockets:
