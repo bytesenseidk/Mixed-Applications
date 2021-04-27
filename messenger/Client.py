@@ -36,7 +36,6 @@ if __name__ == "__main__":
                     sys.exit()
                 username_length = int(username_header.decode('utf-8').strip())
                 username = client.client_socket.recv(username_length).decode('utf-8')
-
                 message_header = client.client_socket.recv(client.HEADER_LENGTH)
                 message_length = int(message_header.decode('utf-8').strip())
                 message = client.client_socket.recv(message_length).decode('utf-8')
