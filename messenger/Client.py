@@ -4,6 +4,7 @@ import errno
 import select
 import socket
 
+
 class Client(object):
     def __init__(self, my_username, IP="127.0.0.1", PORT=1234):
         self.my_username = my_username
@@ -14,21 +15,19 @@ class Client(object):
 
         username = my_username.encode('utf-8')
         username_header = f"{len(username):<{HEADER_LENGTH}}".encode('utf-8')
-
         self.client_socket.send(username_header + username)
+
 
 if __name__ == "__main__":
     os.system("clear")
     user = input("Enter username  >> ")
     client = CLient(user)
-
     while True:
         message = input(f"{client.my_username}  >> ")
         if message:
             message = message.encode('utf-8')
             message_header = f"{len(message):<{client.HEADER_LENGTH}}".encode('utf-8')
             client_socket.send(message_header + message)
-
         try:
             while True:
                 username_header = client.client_socket.recv(client.HEADER_LENGTH)
