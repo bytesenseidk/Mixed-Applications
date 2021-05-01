@@ -39,6 +39,11 @@ class VectorArithmetic(object):
         return VectorArithmetic(self.x * scalar, self.y * scalar)
 
 
+    def __call__(self):
+        # Describes the instance of the class if called directly.
+        print(f"Vector Instance: {VectorArithmetic(self.x, self.y)}")
+
+
     def triangle_inequality(self, other):
         # The magnitude of the sum of vectors is always less than or equal to the
         # sum of the magnitudes of the vectors: ||v + u|| <= ||v|| + ||u||
@@ -73,3 +78,4 @@ if __name__ == "__main__":
     }
     for key in methods:
         print(key, ": ", str(methods[key]))
+
