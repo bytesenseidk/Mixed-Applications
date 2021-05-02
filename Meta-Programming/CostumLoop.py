@@ -1,13 +1,13 @@
-class CostumIterable(object):
+class CustomIterable(object):
     def __init__(self, string):
         self.string = string
 
     def __iter__(self):
-        # Makes the class iterable (Able to loop through)
-        return CostumLoop(self.string)
+        # Passes the string to the CustomLoop, making it iterable.
+        return CustomLoop(self.string)
 
 
-class CostumLoop(object):
+class CustomLoop(object):
     def __init__(self, string):
         # Converts string to a list of words
         self.words = [word for word in string.split()]
@@ -24,12 +24,12 @@ class CostumLoop(object):
         return word
 
     def __iter__(self):
-        # Treats the class as an iterable itself, makes us able to loop through.
+        # Treats the class as an iterable itself, making it able to loop through.
         return self
 
 
 if __name__ == '__main__':
-    iterable = CostumIterable("Want to learn Python? Follow python_genius today!")
+    iterable = CustomIterable("Want to learn Python? Follow python_genius today!")
     iterator =  iter(iterable)
     while True:
         try:
