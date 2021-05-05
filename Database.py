@@ -26,12 +26,14 @@ class Database(metaclass=MetaSingleton):
         
         self.cursor.execute(f"CREATE TABLE IF NOT EXISTS {self.table_name} (column_1 TEXT, column_2 INT, column_3 REAL)")
         
+        
     def connect(self):
         """ Makes sure to make a connection to the database, if no connection is active. """
         if self.connection is None:
             self.connection = sqlite3.connect("Database_file.db")
             self.cursor = self.connection.cursor()
         return self.cursor, self.connection
+    
     
     def insert_data(self):
         """ Inserts data into our table. """
@@ -41,6 +43,7 @@ class Database(metaclass=MetaSingleton):
         self.cursor.execute(f"INSERT INTO {self.table_name} (column_1, column_2, column_3) VALUES(?,?,?)", (column_1, column_2, column_3))
         self.connection.commit()
 
+        
     def read_data(self):
         """ Reads data from our table. """
         self.cursor.execute(f"SELECT * FROM {self.table_name}")
@@ -55,4 +58,3 @@ if __name__ == "__main__":
     if sys.exit():
         database.cursor.close()
         database.connection.close()
-
