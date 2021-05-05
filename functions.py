@@ -16,7 +16,7 @@ def parameter_func(parameter, default_parameter="Hello"):
 
 def unpacking_func(*args, **kwargs):
     """ This function can take an unlimited amount of arguments, * is called splat, 
-    and accept any amount of parameters, **kwargs accept any amount of keyword arguments """
+    and accepts any amount of parameters, **kwargs accept any amount of keyword arguments """
     return [ar for ar in args]
 
 
@@ -44,4 +44,3 @@ if __name__ == "__main__":
           f"{unpacking_func([1], [2], [3], [4], print, sum)}\n",
           f"{list(yielding_func())}\n",
           f"{recursive_func()}")
-
