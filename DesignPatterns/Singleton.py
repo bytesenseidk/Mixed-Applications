@@ -1,5 +1,6 @@
 import sqlite3
 
+
 class Singleton(type):
     _instances = {}
     def __call__(cls, *args, **kwargs):
@@ -7,7 +8,8 @@ class Singleton(type):
             cls._instances[cls] = super(Singleton, cls).__call__(*args, **kwargs)
         return cls._instances[cls]
 
-class Quiz(metaclass=Singleton):
+    
+class Database(metaclass=Singleton):
     connection = None
     def __init__(self):
         self.cursor, self.connection = self.connect()
@@ -21,7 +23,7 @@ class Quiz(metaclass=Singleton):
 
 
 if __name__ == "__main__":
-    instance_0 = Quiz()
-    instance_1 = Quiz()
+    instance_0 = Database()
+    instance_1 = Database()
     print(f"First Instance:  {instance_0}")
     print(f"Second Instance: {instance_1}")
