@@ -73,11 +73,14 @@ class Bullet(pygame.sprite.Sprite):
 
 bullets = pygame.sprite.Group()
 
+
 pygame.init()
 pygame.mixer.init()
 
-pygame.mixer.music.load('bgsound.wav')
-pygame.mixer.music.play(-1)
+# !! Cant upload soundfile to Github... !!
+# pygame.mixer.music.load('bgsound.wav')
+# pygame.mixer.music.play(-1)
+
 screen = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 pygame.display.set_caption('Kill The Sith')
 clock = pygame.time.Clock()
