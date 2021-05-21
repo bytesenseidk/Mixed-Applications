@@ -2,6 +2,7 @@ import sys
 import pygame
 import random
 
+
 WINDOW_WIDTH = 800
 WINDOW_HEIGHT = 800
 BACKGROUND = pygame.image.load('background.jpg')
