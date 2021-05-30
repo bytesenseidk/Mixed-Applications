@@ -11,35 +11,20 @@
 ^       - Beginning of a String                  {3,4}   - Range of Numbers (Minimum, Maximum)
 $       - End of a String
 """
-
 import re
 
 search_string = """
-some_email15@mail.com     anoter.email@gmail.org     Jane_Doe99@college.tech.edu
-834-998-5415              123-456-7894               999-999-9999
-"""
+    some_email15@mail.com     anoter.email@gmail.org     Jane_Doe99@college.tech.edu
+    834-998-5415              123-456-7894               999-999-9999
+    """
 
-def find_emails():
-    pattern = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
-    return pattern.findall(search_string)
+all_mails = re.compile(r"[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
+specific_mail = re.compile(r"[a-z_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
+all_phonenumbers = re.compile(r"\d{3}.\d{3}.\d{4}")
+specific_phonenumber = re.compile(r"[1-3]+.\d{3}.\d{4}")
 
-def find_specific_email():
-    pattern = re.compile(r"[a-z_.+-]+@[a-zA-Z0-9-]+\.[a-xA-Z0-9-.]+")
-    return pattern.findall(search_string)
-
-def find_phonenum():
-    pattern = re.compile(r"\d{3}.\d{3}.\d{4}")
-    return pattern.findall(search_string)
-
-def find_specific_phonenum():
-    pattern = re.compile(r"[1-3]+.\d{3}.\d{4}")
-    return pattern.findall(search_string)
-
-if __name__ == "__main__":
-    print("\t[ Regular Expression Results ]\n",
-        f"All Emails:       {find_emails()}\n",
-        f"Specific Email:   {find_specific_email()}\n",
-        f"All Numbers:      {find_phonenum()}\n",
-        f"Specific Number:  {find_specific_phonenum()}\n")
-
-
+print("Results:\n"
+    f"All E-mails:          {all_mails.findall(search_string)}\n"
+    f"Specific E-mail:      {specific_mail.findall(search_string)}\n"
+    f"All Phonenumbers:     {all_phonenumbers.findall(search_string)}\n"
+    f"Specific Phonenumber: {specific_phonenumber.findall(search_string)}")
