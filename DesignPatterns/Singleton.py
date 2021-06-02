@@ -42,5 +42,6 @@ if __name__ == "__main__":
     true_instance_1 = TrueDesignPattern()
     print("- Singleton Design Pattern: Restricts the instantiation of a class to one 'single' instance.\n",
           "This is useful when exactly one object is needed to coordinate actions across the system.\n\n",
-         f"Without Singleton: is {True if false_instance_0 == false_instance_1 else False}\n",
+         f"Without Singleton: is {False if false_instance_0 == false_instance_1 else True}\n",
          f"With Singleton:    is {True if true_instance_0 == true_instance_1 else False}\n")
+
