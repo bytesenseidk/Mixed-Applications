@@ -17,7 +17,6 @@ class Dog(object):   # Parrent Class.
     def bark(self):
         return str(self.name + " is barking!! ")
 
-
 """ Inheritance """
 class Puppy(Dog): # Child Class.
     def __init__(self, name):
@@ -33,7 +32,6 @@ class Puppy(Dog): # Child Class.
 if __name__ == "__main__":    # This runs our code, if we execute the script directly.
     snoopy = Dog("Snoopy")    # Instance of the Dog class.
     sniffy = Puppy("Sniffy")  # Instance of the Puppy class.
-
     print(snoopy)
     print(f"\n{'-' * 10}\n")
     print(sniffy)
