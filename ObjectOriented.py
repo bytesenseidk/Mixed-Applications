@@ -1,4 +1,3 @@
-
 class Dog(object):   # Parrent Class.
     race = "Pitbull" # Class Attribute.
     def __init__(self, name): # Constructor / Instantiator.
@@ -38,3 +37,4 @@ if __name__ == "__main__":    # This runs our code, if we execute the script dir
     print(snoopy)
     print(f"\n{'-' * 10}\n")
     print(sniffy)
+
