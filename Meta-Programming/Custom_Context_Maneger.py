@@ -16,11 +16,3 @@ class Runner:
 with Runner(who='Nike') as shoe:
     print(f'running with {shoe}')
 
-
-""" Result:
------------
-Getting ready to go for a run with Nike
-Putting Nike's shoes on.
-running with Nike
-Taking Nike's shoes off
-"""
