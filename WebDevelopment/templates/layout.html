@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% if title %}
+        <title>Basic Structure - {{ title }}</title>
+    {% else %}
+        <title>Basic Structure</title>
+    {% endif %}
+  </head>
+  <body>
+    <ul>
+      <li><a href="/home">Home Page</a></li>
+      <li><a href="/about">About Page</a></li>
+    <ul>
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>
