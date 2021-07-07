@@ -3,7 +3,6 @@ import cv2
 import random
 import datetime
 
-
 class ImageRotate(object):
     def __init__(self, image):
         # Load the image into OpenCV and converts it into a numpy array.
@@ -24,7 +23,6 @@ class ImageRotate(object):
         cv2.imshow("Manipulated Image", self.image)
         cv2.waitKey(0)
         cv2.destroyAllWindows()
-
 
     def rotation(self):
         # Resize the image.
