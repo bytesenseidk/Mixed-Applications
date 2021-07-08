@@ -53,3 +53,4 @@ if __name__ == "__main__":
     img = "image.jpg"
     image = ImageRotate(img)
     image.slice()
+
