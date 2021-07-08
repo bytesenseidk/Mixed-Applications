@@ -61,10 +61,10 @@ if __name__ == "__main__":
         "subtracted": vector_0.__sub__(vector_1),
         "scaled": vector_0.__mul__(5),
         "magnitude": vector_0.__abs__(),
-        "arithmetic_mean": vector_0.arithmetic_mean(),
-        "geometric_mean": vector_0.geometric_mean(),
-        "triangle_inequality": vector_0.triangle_inequality(vector_1)
+        "arit_mean": vector_0.arithmetic_mean(),
+        "geo_mean": vector_0.geometric_mean(),
+        "inequality": vector_0.triangle_inequality(vector_1)
     }
     for key in methods:
-        print(key, ": ", str(methods[key]))
+        print(key, ": \t", str(methods[key]))
 
