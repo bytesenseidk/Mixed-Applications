@@ -3,7 +3,7 @@ class CustomIterable(object):
         self.string = string
 
     def __iter__(self):
-        # Passes the string to the CustomLoop, making it iterable.
+        # Makes the class iterable (Able to loop through)
         return CustomLoop(self.string)
 
 
@@ -24,7 +24,7 @@ class CustomLoop(object):
         return word
 
     def __iter__(self):
-        # Treats the class as an iterable itself, making it able to loop through.
+        # Treats the class as an iterable itself, makes us able to loop through.
         return self
 
 
@@ -36,3 +36,4 @@ if __name__ == '__main__':
             print(next(iterator))
         except StopIteration:
             break
+
