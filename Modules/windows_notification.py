@@ -10,7 +10,6 @@ def notification():
     # Place image in the same dir as script
     icon = "icon.ico"
     length = 30
-    toast.show_toast(title, message,
-        icon_path=icon, duration=length)
+    toast.show_toast(title, message, icon_path=icon, duration=length)
 
 notification()
