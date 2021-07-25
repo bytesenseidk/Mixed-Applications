@@ -3,6 +3,7 @@ import turtle
 turtle.pensize(5)
 turtle.pencolor("red")
 turtle.color("red")
+turtle.speed(2)
 
 def drawing():
     for line in range(5):
