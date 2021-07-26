@@ -1,7 +1,9 @@
+import os
 import json
 import phonenumbers
 from phonenumbers import carrier
 from phonenumbers import geocoder
+from tabulate import tabulate
 from urllib.request import urlopen
 
 class NumberAnalyzer(object):
@@ -16,20 +18,29 @@ class NumberAnalyzer(object):
         data = json.load(response)
         return [description, supplier, data]
     
+    @property
     def parse_data(self):
         country, supplier, device = self.analyze()
         region = device["region"]
         city = device["city"]
-        location = device["loc"]
+        lat, lon = str(device["loc"]).split(",")
+        location = f"Latitude: {lat}, Longtitude: {lon}"
         postal = device["postal"]
         timezone = device["timezone"]
         server = device["org"]
-        hostname = device["hotsname"]
+        hostname = device["hostname"]
         ip = device["ip"]
-        return [country, region, city, location, postal, timezone, server, hostname, supplier, ip]
+        return [["Country", country], ["Region", region], ["City", city], ["Location", location], 
+                ["Postal", postal], ["Timezone", timezone], ["Server", server], ["Hostname", hostname], 
+                ["Supplier", supplier], ["IP", ip]]
+    
+    def __str__(self):
+        return str(f"\n{tabulate(self.parse_data)}")
 
 if __name__ == "__main__":
+    os.system("cls")
+    print("[ Simcard Analyzer - python_genius ]\n")
     number = input("Enter Number: ")
-    test = NumberAnalyzer(number)
-    print(test.parse_data())
+    analyze = NumberAnalyzer(number)
+    print(analyze)
     
