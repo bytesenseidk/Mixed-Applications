@@ -1,4 +1,3 @@
-""" 3x + 1 """
 from matplotlib import pyplot as plt
 plt.style.use("ggplot")
 
@@ -20,14 +19,13 @@ while number != 1:
 	count += 1
 	counts.append(count)
 	numbers.append(number)
-	#print(f"{number}\t :\t {count}")
+	
+plt.plot(counts, numbers, color="k", linestyle="--", marker="o", label="Numbers")
 
-plt.plot(counts, numbers, color="k", linestyle="--", marker="o", label="Line 1")
-
-plt.xlabel("Numbers")
-plt.ylabel("Results")
+plt.xlabel(f"Numbers\nSteps: {count}")
+plt.ylabel(f"Results\nEvens: {evens} | Odds: {odds}")
 plt.title("3x + 1 Illustration")
 plt.grid(True)
 plt.legend()
 plt.show()
-#print(f"Evens: {evens}\t Odds: {odds}\n\n")
+
