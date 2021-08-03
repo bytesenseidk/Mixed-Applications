@@ -28,7 +28,7 @@ plt.plot(counts, numbers, color="k", linestyle="--", marker="o", label="Numbers"
 
 plt.xlabel(f"Numbers\nSteps: {count}")
 plt.ylabel(f"Results\nEvens: {evens} | Odds: {odds}")
-plt.title(f"3x + 1 Illustration: Given number: ")
+plt.title(f"3x + 1 Illustration: Given number: {first}")
 plt.grid(True)
 plt.legend()
 plt.show()
