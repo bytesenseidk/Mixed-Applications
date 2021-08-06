@@ -32,4 +32,3 @@ plt.title(f"3x + 1 Illustration: Given number: {first}")
 plt.grid(True)
 plt.legend()
 plt.show()
-
