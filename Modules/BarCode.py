@@ -19,16 +19,9 @@ class Bar_Gen(object):
 if __name__ == "__main__":
     while True:
         try:
-            code = int(input("[BAR] Enter 12 digits: "))
-            if code < 12 or code > 12:
-                print("Need 12 digits...")
-                continue
-            else:
-                Bar_Gen(code)
-                break
+            Bar_Gen(int(input("[BAR] Enter 12 digits: ")))
         except KeyboardInterrupt:
             break
-        except:
-            print("need 12 numeric values...")
+        except ValueError:
+            print("Need numeric values.")
             continue
-        
