@@ -20,6 +20,7 @@ if __name__ == "__main__":
     while True:
         try:
             Bar_Gen(int(input("[BAR] Enter 12 digits: ")))
+            break
         except KeyboardInterrupt:
             break
         except ValueError:
