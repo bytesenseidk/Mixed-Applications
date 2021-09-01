@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  
   <head>
     <meta charset="utf-8">
     {% if title %}
-        <title>Basic Structure - {{ title }}</title>
+        <title>Test Site - {{ title }}</title>
     {% else %}
-        <title>Basic Structure</title>
+        <title>Test Site</title>
     {% endif %}
   </head>
   <body>
     <ul>
-      <li><a href="/home">Home Page</a></li>
-      <li><a href="/about">About Page</a></li>
+      <li><a href="/test">Test Page</a></li>
     <ul>
     {% block content %}
     {% endblock %}
