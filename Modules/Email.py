@@ -9,7 +9,6 @@ class Email(object):
         self.password = creds["pass"]       # Senders password
         # Create a secure SSL context
         self.context = ssl.create_default_context()
-    
 
     def login_credentials(self):
         """ The senders login credentials - password is hidden. """
@@ -35,7 +34,6 @@ class Email(object):
                 print("\nEmail successfully sent!")
         except:
             print("\nError occurred while trying to send the email.. Please try again.")
-
 
 if __name__ == "__main__":
     Email().send_mail()
