@@ -13,8 +13,8 @@ class Email(object):
 
     def login_credentials(self):
         """ The senders login credentials - password is hidden. """
-        sender_email = str(input(r"Enter your email here: "))
-        password = getpass.getpass("Enter your password here: ")
+        sender_email = str(input(r"Enter your email: "))
+        password = getpass.getpass("Enter your password: ")
         return {"email":sender_email, "pass":password}
 
     def message(self):
