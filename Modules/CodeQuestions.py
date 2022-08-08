@@ -21,17 +21,26 @@ def configure():
         return flag
 
 def question_constructor():
-    flag = configure()
+    # flag = configure()
     while True:
         print("\nType your question or type 'exit' to exit")
         question = input("\nEnter your question: ")
         if question == "exit":
             break
         print('\n')
-        question = f"howdoi {question}" + flag
+        question = f"howdoi {question}" # + flag
         os.system(question)
         
         
 if __name__ == "__main__":
     os.system("cls")
-    question_constructor()
+    while True:
+        print("\nType your question or type 'exit' to exit")
+        question = input("\nEnter your question: ")
+        if question != "exit":
+            print('\n')
+            question = f"howdoi {question}" # + flag
+            os.system(question)
+            continue
+        break
+        
