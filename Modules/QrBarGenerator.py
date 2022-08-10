@@ -28,7 +28,6 @@ class QrCode(object):
         image.show()
         if os.path.exists("temp.png"):
             os.remove("temp.png")
-        
     
 if __name__ == "__main__":
     BarCode("123456789012").generate()
