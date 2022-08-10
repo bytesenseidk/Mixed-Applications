@@ -24,12 +24,10 @@ class QrCode(object):
         self.data = data
     
     def generate(self):
-        temp = io.BytesIO()
-        qr_code = pyqrcode.create(self.data)
-        qr_code.png("temp, scale=10")
-        # image = Image.open(temp).resize((400,400), Image.ANTIALIAS)
-        # image = image.resize((400,400), Image.ANTIALIAS)
-        # image.show()
+        qr_code = pyqrcode.create(self.data).png("temp.png", scale=10)
+        image = Image.open(temp).resize((400,400), Image.ANTIALIAS)
+        image = image.resize((400,400), Image.ANTIALIAS)
+        image.show()
         
     
 
