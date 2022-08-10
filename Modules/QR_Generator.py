@@ -8,14 +8,11 @@ class QR_Gen(object):
 
     @staticmethod
     def qr_generator(text):
-        qr_code = pyqrcode.create(text)
-        file_name = "QR Code Result"
-        save_path = os.path.join(os.path.expanduser('~'),'Desktop')
-
-        name = f"{save_path}{file_name}.png"
-        qr_code.png(name, scale=10)
-        image = Image.open(name).resize((400,400),Image.ANTIALIAS)
+        pyqrcode.create(text).png("temp.png", scale=10)
+        image = Image.open("temp.png").resize((400,400),Image.ANTIALIAS)
         image.show()
+        if os.path.exists("temp.png"):
+            os.remove("temp.png")
 
 if __name__ == "__main__":
     QR_Gen(input("[QR] Enter text or link: "))

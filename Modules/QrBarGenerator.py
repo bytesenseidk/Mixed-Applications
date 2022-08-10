@@ -1,5 +1,5 @@
+import os
 import io
-import png
 import pyqrcode
 from barcode import EAN13
 from barcode.writer import ImageWriter
@@ -24,13 +24,13 @@ class QrCode(object):
         self.data = data
     
     def generate(self):
-        qr_code = pyqrcode.create(self.data).png("temp.png", scale=10)
-        image = Image.open(temp).resize((400,400), Image.ANTIALIAS)
-        image = image.resize((400,400), Image.ANTIALIAS)
+        pyqrcode.create(self.data).png("temp.png", scale=10)
+        image = Image.open("temp.png").resize((400,400), Image.ANTIALIAS)
         image.show()
+        if os.path.exists("temp.png"):
+            os.remove("temp.png")
         
     
-
-temp = BarCode("123456789012")
-temp = QrCode("123456789012")
-temp.generate()
+if __name__ == "__main__":
+    BarCode("123456789012").generate()
+    QrCode("123456789012").generate()
