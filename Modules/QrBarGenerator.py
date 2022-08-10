@@ -18,7 +18,6 @@ class BarCode(object):
         image = Image.open(temp).resize((400,400), Image.ANTIALIAS)
         image.show()
 
-
 class QrCode(object):
     def __init__(self, data):
         self.data = data
