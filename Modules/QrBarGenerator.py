@@ -34,3 +34,4 @@ class QrCode(object):
 if __name__ == "__main__":
     BarCode("123456789012").generate()
     QrCode("123456789012").generate()
+    
