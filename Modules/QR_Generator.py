@@ -14,8 +14,7 @@ class QR_Gen(object):
 
         name = f"{save_path}{file_name}.png"
         qr_code.png(name, scale=10)
-        image = Image.open(name)
-        image = image.resize((400,400),Image.ANTIALIAS)
+        image = Image.open(name).resize((400,400),Image.ANTIALIAS)
         image.show()
 
 if __name__ == "__main__":
