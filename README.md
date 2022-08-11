@@ -1,2 +1,2 @@
-# Python-Apps
-Full Python Applications 
+# Mixed Applications
+A mix of applications written in Python 
