@@ -454,46 +454,5 @@ if __name__ == "__main__":
     root.iconphoto(False, icon)
     GUI(root)
     root.mainloop()
-
-
-
-    # scan = SystemScanner()
-    # menu = {
-    #     1: scan.system_info,
-    #     2: scan.cpu_info,
-    #     3: scan.ram_info,
-    #     4: scan.gpu_info,
-    #     5: scan.disk_info,
-    #     6: scan.network_info
-    # }
-    # while True:
-    #     os.system("cls")
-    #     print(f"\n[ SYSTEM SCANNER ]\n\n"
-    #         "[0] Exit\n"
-    #         "[1] System Information\n"
-    #         "[2] Central Processing Unit\n"
-    #         "[3] Random Access Memory\n"
-    #         "[4] Graphical Processing Unit\n"
-    #         "[5] Disk Information\n"
-    #         "[6] Network Information\n\n")
-    #     try:
-    #         selection = int(input("  >> "))
-    #         if selection == 0:
-    #             os.system("cls")
-    #             print("\nThank you for using the app! Have a nice day...\n\n")
-    #             _ = input("Press Enter to exit..")
-    #             break
-
-    #         os.system("cls")
-    #         choice = menu[selection]
-
-    #         for key, value in choice().items():
-    #             print(f"| {key:25}| {value}".ljust(5))
-    #         print("\n")
-    #         _ = input("Press Enter to continue..")
-    #         continue 
-    #     except:
-    #         os.system("cls")
-    #         print("\nInvalid input! Try again..\n\n")
-    #         _ = input("Press Enter to continue..")
-    #         continue
+    
+    
