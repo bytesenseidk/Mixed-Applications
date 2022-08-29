@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
         self.tag_list = self.read_tags()
         self.lcd_tagCount.display(int(len(self.tag_list)))
 
+
     def initUI(self):
         self.button_add = QtWidgets.QPushButton(self)
         self.button_add.setObjectName("button_add")
