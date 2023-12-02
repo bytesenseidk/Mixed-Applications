@@ -76,24 +76,34 @@ class SignUpScreen(QMainWindow, Navigations):
         self.create_button.clicked.connect(self.sign_up)
         self.login_button.clicked.connect(self.login_page)
         self.exit_button.clicked.connect(self.exit)
-        self.database = Database()   
+        self.database = Database()
+
+
+    def _validate_input(self, username, password, v_password):
+        user_len = lambda username: "True" if len(username) > 5 and len(username) < 15 else "Min. 6 & Max. 16 characters in usernames."
+        same_pass = lambda password, v_password: "True" if password == v_password else "Passwords do not match!"
+        pass_len = lambda password: "True" if len(password) > 7 and len(password) < 63 else "Min. 8 & Max. 64 characters in passwords"
+        user_exist = ""
+        conditions = [user_len(username), same_pass(password, v_password), pass_len(password)]
+        for condition in conditions:
+            if condition != "True":
+                self.feedback_label.setText(condition)
+                return False
+        return True
         
+
     def sign_up(self):
-        if len(self.username_input.text()) > 4 and len(self.password_input.text()) > 4:
-            if self.password_input.text() == self.confirm_password_input.text():    
-                username = self.username_input.text()
-                password = self.password_input.text()
-                user_data = self.database.get_account(username)
-                if user_data["username"] is None:
-                    self.database.save_account(username, password)
-                    self.login_page()
-                else:
-                    self.feedback_label.setText("Username already exists!")
+        username = self.username_input.text()
+        password = self.password_input.text()
+        v_password = self.confirm_password_input.text()
+        if self._validate_input(username, password, v_password):
+            user_data = self.database.get_account(username)
+            if user_data["username"] is None:
+                self.database.save_account(username, password)
+                self.login_page()
             else:
-                self.feedback_label.setText("Passwords do not match")
-        else:
-            self.feedback_label.setText("Username and Password must be at least 5 characters")
-    
+                self.feedback_label.setText("Username already exists!")
+        
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
