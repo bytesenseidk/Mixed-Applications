@@ -20,7 +20,7 @@
       <x>20</x>
       <y>0</y>
       <width>771</width>
-      <height>41</height>
+      <height>61</height>
      </rect>
     </property>
     <property name="font">
@@ -33,6 +33,9 @@
     </property>
     <property name="text">
      <string>File Integrity Checker</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
     </property>
    </widget>
    <widget class="QLineEdit" name="file_entry">
@@ -174,7 +177,7 @@
      <x>0</x>
      <y>0</y>
      <width>805</width>
-     <height>30</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
