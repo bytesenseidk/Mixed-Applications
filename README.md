@@ -55,6 +55,6 @@ Applications & Tools developed in Python
     * Initial build
 - 0.1.1:
     * Professionalize Project
-    
+
 # Licence
-This project is licenced under the Mozilla Public License 2.0 - see the [LICENCE](https://github.com/bytesenseidk/Syntax-N-Modules/blob/master/LICENCE) for details
+This project is licenced under the Mozilla Public License 2.0 - see the [LICENCE](https://github.com/bytesenseidk/Mixed-Applications/blob/main/LICENCE) for details
