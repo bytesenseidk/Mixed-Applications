@@ -3,48 +3,48 @@ Applications & Tools developed in Python
 
 # Description
 ## Games
-- Kill The Sith:
+- **Kill The Sith:**
     - Space hhooter.
-- Dice Game:
+- **Dice Game:**
     - TKinter dice roller.
-- Tetris:
+- **Tetris:**
     - PyGame Tetris game.
 ## Mathematical Tools
-- Number Converter:
+- **Number Converter:**
     - Convert between hexadecimal, binary & decimal number systems.
-- Binary Trainer:
+- **Binary Trainer:**
     - Train your ability to calculate binary numbers in the head.
-- Collatz Conjecture:
+- **Collatz Conjecture:**
     - A mathematical equation that always end up with 1.
 ## Online Tools
-- Email Manager:
+- **Email Manager:**
     - Send & Manage emails.
-- Live Chat:
+- **Live Chat:**
     - A Client - Server application for basic communication.
-- Tag Generator:
+- **Tag Generator:**
     - Generate $n$ amount of tags for different platforms. 
 ## System-Tools
-- Computer Details:
+- **Computer Details:**
     - Display hardware & network data.
-- File Integrity:
+- **File Integrity:**
     - Calculate checksum of file & compare to valid checksum.
-- Melody Player:
+- **Melody Player:**
     - Play simple sounds on a small virtuel keyboard.
-- System Maintainer:
+- **System Maintainer:**
     - Cross-platform system cleaner with update, autoremoval & more.
-- System Info:
+- **System Info:**
     - PyQt5 extension of *Computer Details*.
-- System Stopper:
+- **System Stopper:**
     - Cross-platform system stopper with timer.
-- Alarm:
+- **Alarm:**
     - Simple alarm to *beeb* at a specific moment
-- Hash Validator:
+- **Hash Validator:**
     - Terminal version of *File Integrity*.
-- Project Installer:
+- **Project Installer:**
     - Install whole python projects by copying path or dropping python project into input field.
-- Terminal Animation:
+- **Terminal Animation:**
     - Displays a simple animation in the Terminal.
-- Text Editor:
+- **Text Editor:**
     - Simple text-editor that can save, redo & undo, etc.  
 
 # Authors
