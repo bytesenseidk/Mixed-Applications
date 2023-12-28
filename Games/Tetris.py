@@ -252,7 +252,6 @@ def update_score(nscore):
         else:
             file.write(str(nscore))
 
-
 def max_score():
     try:
         with open('scores.txt', 'r') as file:
