@@ -373,7 +373,6 @@ def main(win):
             run = False
             update_score(score)
 
-
 def main_menu(win):
     run = True
     while run:
@@ -387,7 +386,6 @@ def main_menu(win):
                 main(win)
 
     pygame.display.quit()
-
 
 win = pygame.display.set_mode((s_width, s_height))
 pygame.display.set_caption('Tetris')
