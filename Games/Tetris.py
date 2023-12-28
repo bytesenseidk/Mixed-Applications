@@ -224,7 +224,6 @@ def clear_rows(grid, locked):
             if y < ind:
                 newKey = (x, y + inc)
                 locked[newKey] = locked.pop(key)
-
     return inc
 
 
@@ -241,7 +240,6 @@ def draw_next_shape(shape, surface):
         for j, column in enumerate(row):
             if column == '0':
                 pygame.draw.rect(surface, shape.color, (sx + j*block_size, sy + i*block_size, block_size, block_size), 0)
-
     surface.blit(label, (sx + 10, sy - 30))
 
 
