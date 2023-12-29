@@ -6,17 +6,17 @@ commands = {
     "Windows": {"clean": "cls",
                 "pip": "pip",
                 "split": "\\",
-                "env": "venv\\Scripts\\activate"
+                "env": "env\\Scripts\\activate"
                 },
     "Linux": {"clean": "clear", 
                 "pip": "pip3",
                 "split": "/",
-                "env": "source venv/bin/activate"
+                "env": "source env/bin/activate"
                 },
     "Mac": {"clean": "clear",
                 "pip": "pip",
                 "split": "/",
-                "env": "source venv/bin/activate"
+                "env": "source env/bin/activate"
                 }
 }
 
@@ -28,8 +28,8 @@ project_name = os.getcwd().split(commands[operating_system]["split"])[-1]
 
 if os.path.isfile("requirements.txt"):
     os.system(f"{commands[operating_system]['pip']} install virtualenv")
-    if not os.path.isdir("venv"):
-        os.system("virtualenv venv")
+    if not os.path.isdir("env"):
+        os.system("virtualenv env")
 
     os.system(commands[operating_system]["clean"])
 
