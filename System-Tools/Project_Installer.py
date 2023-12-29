@@ -3,21 +3,12 @@ import platform
 
 operating_system = platform.system()
 commands = {
-    "Windows": {"clean": "cls",
-                "pip": "pip",
-                "split": "\\",
-                "env": "env\\Scripts\\activate"
-                },
-    "Linux": {"clean": "clear", 
-                "pip": "pip3",
-                "split": "/",
-                "env": "source env/bin/activate"
-                },
-    "Mac": {"clean": "clear",
-                "pip": "pip",
-                "split": "/",
-                "env": "source env/bin/activate"
-                }
+    "Windows": {"clean": "cls", "pip": "pip",
+                "split": "\\", "env": "env\\Scripts\\activate"},
+    "Linux": {"clean": "clear", "pip": "pip3",
+                "split": "/", "env": "source env/bin/activate"},
+    "Mac": {"clean": "clear", "pip": "pip",
+                "split": "/", "env": "source env/bin/activate"}
 }
 
 os.system(commands[operating_system]["clean"])
