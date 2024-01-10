@@ -2,7 +2,6 @@ import psutil
 import cpuinfo
 from tabulate import tabulate
 
-
 def cpu_info():
     frequency = psutil.cpu_freq()
     processor = cpuinfo.get_cpu_info()['brand_raw']
