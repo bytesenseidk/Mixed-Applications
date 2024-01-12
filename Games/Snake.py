@@ -10,8 +10,8 @@ window.keypad(1)
 window.timeout(100)
 
 # Draw snake
-snake_x = width / 4
-snake_y = height / 2
+snake_x = width // 4
+snake_y = height // 2
 snake = [
     [snake_y, snake_x],
     [snake_y, snake_x - 1],
