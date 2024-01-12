@@ -45,4 +45,18 @@ while True:
     
     snake.insert(0, new_head)
 
+    if snake[0] == food:
+        food = None
+        while food is None:
+            # New food location
+            new_food = [
+                random.randint(1, height - 1),
+                random.randint(1, width - 1)
+            ]
+            food = new_food if new_food not in snake else None
+        window.addch(food[0], food[1], curses.ACS_PI)
+    else:
+        tail = snake.pop()
+        window.addch(int(tail[0]), int(tail[1]), ' ')
     
+    window.addch(int(snake[0][0]), int(snake[0][1]), curses.ACS_CKBOARD)
