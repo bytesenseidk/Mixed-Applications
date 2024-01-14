@@ -122,7 +122,7 @@ class MainWindow(QMainWindow):
         self.check_python_genius.setObjectName("check_python_genius")
         self.check_python_genius.setGeometry(QtCore.QRect(140, 150, 191, 21))
         self.check_python_genius.setFont(self.font_tags)
-        self.check_python_genius.setText("python_genius")
+        self.check_python_genius.setText("bytesenseidk")
         
         self.check_hacking = QtWidgets.QCheckBox(self)
         self.check_hacking.setObjectName("check_hacking")
