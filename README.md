@@ -49,7 +49,11 @@ Applications & Tools developed in Python
 - **Terminal Animation:**
     - Displays a simple animation in the Terminal.
 - **Text Editor:**
-    - Simple text-editor that can save, redo & undo, etc.  
+    - Simple text-editor that can save, redo & undo, etc.
+- **Animated Circular Clock:**
+    - A simple TKinter app to show a live animted rounded clock.
+- **Weather Dashboard:**
+    - Simple TKinter app to get the current weather (temperature and climate) of a given city.  
 
 # Authors
 [Byte Sensei](https://github.com/bytesenseidk)
