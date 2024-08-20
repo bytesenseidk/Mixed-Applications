@@ -22,7 +22,11 @@ Applications & Tools developed in Python
 - **Live Chat:**
     - A Client - Server application for basic communication.
 - **Tag Generator:**
-    - Generate $n$ amount of tags for different platforms. 
+    - Generate $n$ amount of tags for different platforms.
+- **Wifi Monitor:**
+    - Works like airmon-ng, monitoring networks in the area and display sigal strength, encryption, etc...
+- **IP Geographical Locator:**
+    - Fetches geo locations of a given IP address with options to show on map and save data. 
 ## System-Tools
 - **Computer Details:**
     - Display hardware & network data.
