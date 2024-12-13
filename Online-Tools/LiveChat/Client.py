@@ -16,6 +16,7 @@ class Client(object):
         username_header = f"{len(username):<{self.HEADER_LENGTH}}".encode('utf-8')
         self.client_socket.send(username_header + username)
 
+
 if __name__ == "__main__":
     user = input("Enter username  >> ")
     client = Client(user)
