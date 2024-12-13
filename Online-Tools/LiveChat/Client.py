@@ -17,7 +17,6 @@ class Client(object):
         self.client_socket.send(username_header + username)
 
 if __name__ == "__main__":
-    os.system("cls")
     user = input("Enter username  >> ")
     client = Client(user)
     while True:
@@ -46,3 +45,5 @@ if __name__ == "__main__":
         except Exception as e:
             print(f'Reading error: {str(e)}')
             sys.exit()
+
+
