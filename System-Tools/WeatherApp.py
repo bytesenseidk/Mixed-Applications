@@ -9,8 +9,8 @@ def get_weather():
         label_temp.config(text="Enter a city name!")
         return
     
-    api_key = "2b5675d44687f354613a1ab9f53d4831"  # Replace with your own OpenWeatherMap API key
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"
+    api_key = "<API_KEY>"  # Replace with your own OpenWeatherMap API key
+    url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric"  # API request URL
     
     response = requests.get(url).json()  # Make the API request and parse the JSON response
     
@@ -94,7 +94,7 @@ label_icon = tk.Label(root, bg="#1e1e2f")  # Icon label with the same background
 label_icon.pack(pady=10)  # Add padding around the icon for spacing
 
 # Create and configure the refresh button to update the weather data
-refresh_button = tk.Button(root, text="Get Weather", font=("Arial", 14), command=get_weather, bg="#4caf50", fg="white", relief="flat")
+refresh_button = tk.Button(root, text="Get Weather", font=("Arial", 14), command=get_weather, bg="#4caf50", fg="white", relief="flat")  # Styled button
 refresh_button.pack(pady=20)  # Add padding around the button for spacing
 
 root.mainloop()  # Run the main loop to keep the GUI window open
